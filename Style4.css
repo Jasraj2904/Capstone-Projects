@@ -1,0 +1,79 @@
+/* Image section backgrounds */
+.pimg1, .pimg2, .pimg3, .pimg4, .pimg5 {
+    position: relative;
+    opacity: 0.85;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+/* Individual images */
+.pimg1 {
+    background-image: url('New York.jpg');
+}
+
+.pimg2 {
+    background-image: url('California.jpg');
+}
+
+.pimg3 {
+    background-image: url('Chicago.jpg');
+}
+
+.pimg4 {
+    background-image: url('Texas 1.jpg');
+}
+
+.pimg5 {
+    background-image: url('Washington.jpg');
+}
+
+/* Text inside image section */
+.ptext {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    color: black;
+    font-size: 30px;
+    transform: translateY(-50%);
+}
+
+/* Sections between images */
+.section {
+    text-align: center;
+    padding: 80px 50px;
+}
+
+.section-dark {
+    background-color: beige;
+    color: black;
+}
+
+/* Decorative box and transparency */
+.border {
+    border: 2px solid black;
+    padding: 10px 20px;
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+.trans {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Welcome text */
+.heading-text {
+    font-size: 40px;
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Scroll fix for smaller screens */
+@media (max-width: 568px) {
+    .pimg1, .pimg2, .pimg3, .pimg4, .pimg5 {
+        background-attachment: scroll;
+    }
+}
