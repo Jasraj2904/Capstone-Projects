@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Website Part-1</title>
+    <style>
+      *{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body{
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #f4f4f4;
+        line-height: 1.6;
+      }
+      header{
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 0;
+      }
+      nav ul{
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      nav ul li{
+        margin: 0 15px;
+      }
+      nav ul li a{
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        padding: 5px 10px;
+      }
+      nav ul li a:hover {
+        background-color: #555;
+        border-radius: 5 px;
+      }
+      section{
+        padding: 2em;
+        display: none;
+      }
+      section.active{
+        display: block;
+      }
+      .gallery-container {
+         display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        justify-content: center;
+        margin-top: 1em;
+      }     
+
+      .gallery-container img {
+      width: 250px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+    }
+
+      .gallery-container img:hover { 
+      transform: scale(1.05);
+    }
+
+      footer{
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 1em 0;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+   <header>
+     <h1>My Multi Page Website</h1>
+      <nav>
+        <ul>
+          <li><a href="#" onclick="showPage('home')">Home</a></li>
+          <li><a href="#" onclick="showPage('about')">About</a></li>
+          <li><a href="#" onclick="showPage('services')">Services</a></li>
+          <li><a href="#" onclick="showPage('gallery')">Gallery</a></li>
+          <li><a href="#" onclick="showPage('contact')">Contact </a></li>
+        </ul>
+      </nav>
+   </header>
+   <main>
+
+     <section id="home" class="active">
+       <h2>Welcome to Our Website</h2>
+        <p>This is a simple multi-page website created using HTML and CSS. It helps you explore how navigation and content management works without loading new pages.</p>
+        <p>Use the menu above to explore the different sections like About Us, Services, Gallery, and Contact.</p>
+     </section>
+
+     <section id="about">
+       <h2>About Us</h2>
+        <p>We are a passionate group of designers and developers dedicated to crafting clean, user-friendly websites. Our mission is to deliver stunning visuals backed by efficient coding practices.</p>
+        <p>Whether you're a small business or a large enterprise, our goal is to help you stand out online and reach your audience effectively.</p>
+     </section>
+
+     <section id="services">
+       <h2>Our Services</h2>
+        <ul>
+          <li>✔️ Website Design & Development</li>
+          <li>✔️ Mobile App Development</li>
+          <li>✔️ Branding & Logo Creation</li>
+          <li>✔️ SEO & Digital Marketing</li>
+          <li>✔️ E-commerce Solutions</li>
+        </ul>
+        <p>Each service is tailored to meet your business needs, using modern tools and best practices.</p>
+     </section>
+
+     <section id="gallery">
+       <h2>Gallery</h2>
+         <p>Take a look at our Gallery</p>
+         <div class="gallery-container">
+         <img src="Team.jpg" alt="Gallery Image 1">
+         <img src="Portfolio.jpg" alt="Gallery Image 2">
+         <img src="Service.jpg" alt="Gallery Image 3">
+         <img src="pr" alt="Gallery Image 4">
+  </div>
+     </section>
+
+     <section id="contact">
+       <h2>Contact Us</h2>
+        <p><strong>Email:</strong> rahul.devani2025@india.com</p>
+        <p><strong>Phone:</strong> +91-9876543210</p>
+        <p><strong>Address:</strong> Flat No. 302, Shree Residency  Sector 19, Dwarka New Delhi – 110075 India
+</p>
+        <p>We're here to help! Drop us a message and our team will respond shortly.</p>
+     </section>
+   </main>
+
+   <footer>
+    <p>&copy; 2025 My Website</p>
+   </footer>
+
+   <script>
+    function showPage(pageId){
+      const sections = document.querySelectorAll('main  section');
+      sections.forEach(section => section.classList.remove('active'));
+      document.getElementById(pageId).classList.add('active');
+    }
+   </script>
+  </body>
+</html>
