@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Website Part-1</title>
+    <style>
+      *{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body{
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #f4f4f4;
+        line-height: 1.6;
+      }
+      header{
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 0;
+      }
+      nav ul{
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      nav ul li{
+        margin: 0 15px;
+      }
+      nav ul li a{
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        padding: 5px 10px;
+      }
+      nav ul li a:hover {
+        background-color: #555;
+        border-radius: 5 px;
+      }
+      section{
+        padding: 2em;
+        display: none;
+      }
+      section.active{
+        display: block;
+      }
+      footer{
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 1em 0;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+   <header>
+     <h1>My Multi Page Website</h1>
+      <nav>
+        <ul>
+          <li><a href="#" onclick="showPage('home')">Home</a></li>
+          <li><a href="#" onclick="showPage('about')">About</a></li>
+          <li><a href="#" onclick="showPage('services')">Services</a></li>
+          <li><a href="#" onclick="showPage('gallery')">Gallery</a></li>
+          <li><a href="#" onclick="showPage('contact')">Contact </a></li>
+        </ul>
+      </nav>
+   </header>
+   <main>
+
+     <section id="home" class="active">
+       <h2>Home</h2>
+         <p>Welcome to our Homepage!</p>
+     </section>
+
+     <section id="about">
+       <h2>About</h2>
+         <p>We are passionate about web design and development.</p>
+     </section>
+
+     <section id="services">
+       <h2>Services</h2>
+         <p>Offer a wide range of service from Website and App </p>
+     </section>
+
+     <section id="gallery">
+       <h2>Gallery</h2>
+         <p>Take a look at our Gallery</p>
+     </section>
+
+     <section id="contact">
+       <h2>Contact</h2>
+         <p>Email: contact@example.com | Phone: +91-1234567890</p>
+     </section>
+   </main>
+
+   <footer>
+    <p>&copy; 2025 My Website</p>
+   </footer>
+
+   <script>
+    function showPage(pageId){
+      const sections = document.querySelectorAll('main  section');
+      sections.forEach(section => section.classList.remove('active'));
+      document.getElementById(pageId).classList.add('active');
+    }
+   </script>
+  </body>
+</html>
